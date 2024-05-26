@@ -1,28 +1,22 @@
-// 1. Basic Mathematical Operations 
+//==================================================
+//1. Keep Hydrated
 
-function basicMathOperation(operator, value1, value2) {
-    switch (operator) {
-      case '+':
-        return value1 + value2;
-      case '-':
-        return value1 - value2;
-      case '*':
-        return value1 * value2;
-      case '/':
-        return value1 / value2;
-      default:
-        throw new Error('Invalid operator');
-    }
+  const litres = (time) => {
+    // Calculate the amount of water Nathan drinks
+    const water = time * 0.5;
+    
+    // Round down to the nearest whole number
+    return Math.floor(water);
   }
-  
-  // Example usage:
-  console.log(basicMathOperation('+', 4, 7)); // Output: 11
-  console.log(basicMathOperation('-', 15, 18)); // Output: -3
-  console.log(basicMathOperation('*', 5, 5)); // Output: 25
-  console.log(basicMathOperation('/', 49, 7)); // Output: 7
 
-  
-  // 2. Vowel Count 
+  // Example usage:
+  console.log(litres(3));    // Output: 1
+  console.log(litres(6.7));  // Output: 3
+  console.log(litres(11.8)); // Output: 5
+
+//=================================================
+ 
+// 2. Vowel Count 
   const countVowels = (str) => {
     // Define the vowels
     const vowels = 'aeiou';
@@ -41,6 +35,8 @@ function basicMathOperation(operator, value1, value2) {
   console.log(countVowels("xyz")); // Output: 0
   
   
+//==================================================== 
+
 //3 Exes and Ohs 
 
 function XO(str) {
@@ -70,6 +66,8 @@ console.log(XO("ooxXm"));   // Output: true
 console.log(XO("zpzpzpp")); // Output: true
 console.log(XO("zzoo"));    // Output: false
 
+//============================================================
+
 //4. Credit Card Mask
 
 const maskify = (str) => {
@@ -91,6 +89,8 @@ console.log(maskify(""));                 // Output: ""
 console.log(maskify("Skippy"));           // Output: "##ippy"
 console.log(maskify("Nananananananananananananananana Batman!")); // Output: "####################################man!"
 
+//============================================================
+
 //5 List Filterning 
 
 const filter_list = (lst) => {
@@ -103,3 +103,20 @@ console.log(filter_list([1, 2, 'a', 'b']));              // Output: [1, 2]
 console.log(filter_list([1, 'a', 'b', 0, 15]));          // Output: [1, 0, 15]
 console.log(filter_list([1, 2, 'aasf', '1', '123', 123])); // Output: [1, 2, 123]
 
+//=============================================================
+
+//6 Abbreviate a two word name 
+
+const toInitials = (name) => {
+  // Split the name into first and last name
+  const [firstName, lastName] = name.split(' ');
+
+  // Get the initials and convert them to uppercase
+  const initials = `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`;
+
+  return initials;
+}
+
+// Example usage:
+console.log(toInitials("Sam Harris"));    // Output: S.H
+console.log(toInitials("patrick feeney")); // Output: P.F
